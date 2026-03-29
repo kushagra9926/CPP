@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>           // to include and use maths operations.
 using namespace std;
 
 int main(){
@@ -200,6 +201,39 @@ int main(){
             }
             cout << t << endl;
         }
+
+// Practice question: Check if a number is prime or not.
+    // Solution:
+            int n9 = 9;
+            bool isPrime = true;
+
+            for(int i = 2; i <= n9 - 1; i++){
+                if(n9 % i == 0){
+                    isPrime = false;
+                    break;
+                }
+            }
+            if(isPrime){
+                cout << "Number is Prime." << endl;
+            }else{
+                cout << "Number is NOT Prime" << endl;
+            }
+    // Optimal Solution:
+            int n10 = 9;
+            bool isPrime = true;
+
+            for(int i = 2; i <= sqrt(n10); i++){         // Concept is that numbers repeat after a certain digit in finding prime. For ex:
+                if(n10 % i == 0){                         // factors of 15 are (1,15), (3,5), (5,3), (15,1). Here no need to go after 3 so
+                    isPrime = false;                     // therefore we go till square root of that number to avoide similar numbers.
+                    break;
+                }
+            }
+            if(isPrime){
+                cout << "Number is Prime." << endl;
+            }else{
+                cout << "Number is NOT Prime" << endl;
+            }
+
     return 0;
 
 }
