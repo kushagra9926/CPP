@@ -14,9 +14,16 @@ int main(){
         // 1) Outer loop: no of Rows
         // 2) Inner loop: no of Columns/ each rows
         // 3) Work in inner loop (each row) i print
-
-        for(int i = 1; i <= 4; i++){
-            for(int j = 1; )
+        
+        int n1 = 4;
+        // outer loop
+        for(int i = 1; i <= n1; i++){
+            // inner loop
+            for(int j = 1; j <= n1; j++){
+                // work
+                cout << i << " ";
+            }
+            cout << endl;
         }
 
     return 0;
