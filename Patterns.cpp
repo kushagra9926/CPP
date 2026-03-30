@@ -42,5 +42,27 @@ int main(){
             }
             cout << endl;
         }
+
+// Question: Print pattern  * * * *  using loop
+//                          * * *
+//                          * *
+//                          * 
+
+    // Solution: 
+        int n3 = 8;
+        for(int i = 1; i <= n3; i++){
+            for(int j = n3; j >= i; j--){
+                cout << "*" << " ";
+            }
+            cout << endl;
+        }
+
+// Print Half Pyramid pattern  1        
+//                             1 2
+//                             1 2 3
+//                             1 2 3 4
+
+    // Solution: 
+        
     return 0;
 }
