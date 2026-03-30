@@ -5,7 +5,7 @@ int main(){
 
 // Nested Loop: Loop inside a loop.
 
-// Question: print  1 1 1 1 using loop.
+// Question: Print  1 1 1 1 using loop.
 //                  2 2 2 2
 //                  3 3 3 3
 //                  4 4 4 4
@@ -25,6 +25,18 @@ int main(){
             }
             cout << endl;
         }
+// Question: Print Star pattern  *       using loop.
+//                               * *
+//                               * * *
+//                               * * * *
 
+    // Solution: 
+        int n2 = 8;
+        for(int i = 1; i <= n2 ; i++){
+            for(int j = 1; j <= i; j ++){
+                cout << "*" << " ";
+            }
+            cout << endl;
+        }
     return 0;
 }
