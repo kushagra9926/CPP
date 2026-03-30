@@ -31,6 +31,10 @@ int main(){
 //                               * * * *
 
     // Solution: 
+        // 1) outer loop --> Rows (i) , n times (1 to n)
+        // 2) inner loop --> columns i times (1 to i)
+        // 3) print *
+        
         int n2 = 8;
         for(int i = 1; i <= n2 ; i++){
             for(int j = 1; j <= i; j ++){
