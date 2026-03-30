@@ -63,6 +63,15 @@ int main(){
 //                             1 2 3 4
 
     // Solution: 
+        int n4 = 8;
+        for(int i = 1; i <= n4; i++){
+            for(int j = 1; j <= i; j++){
+                cout << j << " ";
+            }
+            cout << endl;
+        }
+
+
         
     return 0;
 }
