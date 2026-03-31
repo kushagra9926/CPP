@@ -146,7 +146,7 @@ int main(){
 //                            *
 
     // Solution: 
-        int n9 = 4;
+        int n9 = 10;
         // Upper Pyramid
         for(int i = 1; i <= n9; i++){
             for(int j = 1; j <= n9 - i; j++){
