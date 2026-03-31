@@ -102,7 +102,23 @@ int main(){
                 }
             }
             cout << "*" << endl;
-            
+        }
+// Print the pattern     *
+//                     * *
+//                   * * *
+//                 * * * *
+
+    // Solution: 
+        int n7 = 8;
+        for(int i = 1; i <= n7; i++){
+            for(int j = 1; j <= n7; j++){
+                if(j <= n7 - i){
+                    cout << " " << " ";
+                }else{
+                    cout << "*" << " ";
+                }
+            }
+            cout << endl;
         }
 
         
