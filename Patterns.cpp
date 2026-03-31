@@ -5,7 +5,7 @@ int main(){
 
 // Nested Loop: Loop inside a loop.
 
-// Question: Print  1 1 1 1 using loop.
+// Question: Print  1 1 1 1  using loop.
 //                  2 2 2 2
 //                  3 3 3 3
 //                  4 4 4 4
@@ -84,6 +84,25 @@ int main(){
                 ch++;
             }
             cout << endl;
+        }
+// Print Hollow Rectangle pattern  * * * * *
+//                                 *       *
+//                                 *       *
+//                                 * * * * * 
+
+    // Solution: 
+        int n6 = 4;
+        for(int i = 1; i <= n6; i++){
+            cout << "*" << " ";
+            for(int j = 1; j <= n6 - 1; j++){
+                if(i == 1 || i == n6){
+                    cout << "*" << " ";
+                }else{
+                    cout << " " << " ";
+                }
+            }
+            cout << "*" << endl;
+            
         }
 
         
