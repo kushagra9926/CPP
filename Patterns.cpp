@@ -167,8 +167,50 @@ int main(){
             }
             cout << endl;
         }
+// Print Butterfly Pattern  *             *
+//                          * *         * *
+//                          * * *     * * *
+//                          * * * * * * * *
+//                          * * * * * * * *
+//                          * * *     * * * 
+//                          * *         * *
+//                          *             *
 
-
+    // Solution: 
+        int n10 = 4;
+        // Upper Part
+        for(int i = 1; i <= n10; i++){
+            for(int j = 1; j <= i; j++){
+                cout << "*" << " ";
+            }
+            for(int k = 1; k <= n10 - i; k++){
+                cout << " " << " ";
+            }
+            for(int l = 1; l <= n10 - i; l++){
+                cout << " " << " ";
+            }
+            for(int m = 1; m <= i; m++){
+                cout << "*" << " ";
+            }
+            cout << endl;
+        }
+    
+        // Lower Part
+        for(int i = 1; i <= n10; i++){
+            for(int j = n10; j >= i ; j--){
+                cout << "*" << " ";
+            }
+            for(int k = 1; k <= i - 1; k++){
+                cout << " " << " ";
+            }
+            for(int l = 1; l <= i - 1; l++){
+                cout << " " << " ";
+            }
+            for(int m = n10; m >= i; m--){
+                cout << "*" << " ";
+            }
+            cout << endl;
+        }
         
     return 0;
 }
