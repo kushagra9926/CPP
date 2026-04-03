@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
 // Functions: Block of code which runs when it is called.
@@ -16,6 +17,9 @@ using namespace std;
         Declaration: the function's name, return type, and parameters(if any)
         Definition: the body of the function.
         */
+
+    //Scope: Area where a variable can be accessed or used. Two types: 1) Local Scope, 2) Global Scope.
+
 void sayHello(){
     cout << "Hello :) \n";
 }
@@ -28,25 +32,44 @@ int diff(int a , int b){
     int diff = a - b;
     return diff;
 }
-int product(int a, int b){
-    int product = a * b;
-    return product;
-}
-bool isEven(int a){
-    if(a % 2 == 0){
-        return true;
-    }else{
-        return false;
-    }
-}
-int factorial(int n){
-    int fact = 1;
-    for(int i = 1; i <= n; i++){
-        fact = fact * i;
-    }
-    cout << "factorial(" << n << ") = " << fact << endl;
-    return fact;   
-}
+// Question: WAF to find the product of 2 numbers a & b.
+    // Solution:
+        int product(int a, int b){
+            int product = a * b;
+            return product;
+        }
+// Question: WAF to print if a number is odd or even.
+    // Solution: 
+        bool isEven(int a){
+            if(a % 2 == 0){
+                return true;
+            }else{
+                return false;
+            }
+        }
+// Question: WAF to print the factorial of a number, n.
+    // Solution: 
+        int factorial(int n){
+            int fact = 1;
+            for(int i = 1; i <= n; i++){
+                fact = fact * i;
+            }
+            cout << "factorial(" << n << ") = " << fact << endl;
+            return fact;   
+        }
+// Question: WAF to print if a number is prime or not.
+    //Solution:
+        bool isPrime(int n){
+            if(n == 1){
+                return false;
+            }
+            for(int i = 2; i <= sqrt(n); i++){
+                if(n % i == 0){
+                    return false;
+                }
+            }
+            return true;
+        }
 
 int main(){
     sayHello();  //function call
@@ -55,22 +78,18 @@ int main(){
     cout << "sum = " << s << endl;
     cout << "diff = " << d << endl;
 
-// Question: WAF to find the product of 2 numbers a & b.
-    // Solution:
-        int p = product(2, 5);
-        cout << "product = " << p << endl;
+    int p = product(2, 5);
+    cout << "product = " << p << endl;
+        
+    cout << isEven(20) << endl;
 
-// Question: WAF to print if a number is odd or even.
-    // Solution: 
-        cout << isEven(20) << endl;
+    factorial(0);
+    factorial(1);
+    factorial(2);
+    factorial(3);
+    factorial(4);
+    factorial(5);
 
-// Question: WAF to print the factorial of a number, n.
-    // Solution: 
-        factorial(0);
-        factorial(1);
-        factorial(2);
-        factorial(3);
-        factorial(4);
-        factorial(5);
+    cout << isPrime(2) << endl;
     return 0;
 }
