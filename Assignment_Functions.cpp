@@ -20,6 +20,16 @@ using namespace std;
         }
 // Question 2: Write a function to calculate the sum of digits of a number.
     // Solution:
+        int sum_digit(int n){
+            int sum_digit = 0;
+            int num = n;
+            while(num > 0){
+                int last_digit = num % 10;
+                sum_digit += last_digit;
+                num = num / 10;
+            }
+            return sum_digit;
+        }
 // Question 3: Write a function which takes 2 numbers as parameters(a & b) and outputs: a^2 + b^2 + 2*ab.
     // Solution:
 // Question 4: Write a function that prints the largest of 3 numbers.
@@ -32,5 +42,7 @@ int main(){
         cout << isPalin(121) << endl;
         cout << isPalin(321) << endl;
 
+    // 2)
+        cout << sum_digit(12345) << endl;
     return 0;
 }
