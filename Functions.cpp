@@ -20,6 +20,9 @@ using namespace std;
 
     //Scope: Area where a variable can be accessed or used. Two types: 1) Local Scope, 2) Global Scope.
 
+// Function Overloading: Multiple functions with the same name but different parameters.
+//                       Ex: We can define sum function multiple times by changing its parameters like int, decimal in compiler will understand when to consider which one. 
+
 void sayHello(){
     cout << "Hello :) \n";
 }
@@ -70,6 +73,16 @@ int diff(int a , int b){
             }
             return true;
         }
+// Question: WAF to find the binomial coefficient for a given n & r.
+    // Solution: 
+        int binCoeff(int n, int r){
+            int val1 = factorial(n);
+            int val2 = factorial(r);
+            int val3 = factorial(n - r);
+
+            int result = val1 / (val2 * val3);
+            return result;
+        }
 
 int main(){
     sayHello();  //function call
@@ -91,5 +104,7 @@ int main(){
     factorial(5);
 
     cout << isPrime(2) << endl;
+
+    cout << binCoeff(4 , 2) << endl;
     return 0;
 }
