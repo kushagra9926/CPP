@@ -83,6 +83,16 @@ int diff(int a , int b){
             int result = val1 / (val2 * val3);
             return result;
         }
+// Question: Print all Primes in range from 2 to n.
+    // Solution:
+        void allPrimes(int n){
+            for(int i = 2; i <= n; i++){
+                if(isPrime(i)){
+                    cout << i << " ";
+                }
+            }
+            cout << "\n";
+        }
 
 int main(){
     sayHello();  //function call
@@ -106,5 +116,7 @@ int main(){
     cout << isPrime(2) << endl;
 
     cout << binCoeff(4 , 2) << endl;
+    
+    allPrimes(13);
     return 0;
 }
