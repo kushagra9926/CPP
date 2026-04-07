@@ -43,6 +43,24 @@ using namespace std;
             cout << "binary of " << decNum << " = " << binNum << endl;
         }
 
+// Question 3: Following are the rules of adding 2 binary digits: 
+    // 0+0=0, carry=0
+    // 1+0=1, carry=0
+    // 0+1=1, carry=0
+    // 1+1=0, carry=1 
+    /*
+    So, in math if 2 + 3 = 5, in binary it looks like
+        
+        1 0
+      + 1 1
+       -----
+       1 0 1
+    */
+    
+    // Using this method, try to add these 2 numbers (63 & 22) in their binary form and verify that the binary output is equal to the decimal value 85.
+
+    // Solution: 
+        
 
         int main(){
             binToDec(111111);
