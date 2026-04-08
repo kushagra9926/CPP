@@ -60,6 +60,17 @@ using namespace std;
     // Using this method, try to add these 2 numbers (63 & 22) in their binary form and verify that the binary output is equal to the decimal value 85.
 
     // Solution: 
+        /*
+        Binary of 63 = (1 1 1 1 1 1) & 22 = (1 0 1 1 0)  
+        When we add these binary numbers, calculation is as follows: 
+
+        1 1 1 1      // carry
+        1 1 1 1 1 1
+      +   1 0 1 1 0
+       -------------
+      1 0 1 0 1 0 1    =  85
+      
+        */
         
 
         int main(){
