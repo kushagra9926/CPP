@@ -70,7 +70,7 @@ using namespace std;
        -------------
       1 0 1 0 1 0 1    =  85
       
-        */
+      */
         
 
         int main(){
