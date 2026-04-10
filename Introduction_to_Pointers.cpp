@@ -20,13 +20,30 @@ int main(){
        int *ptr1 = &a;
        cout << &a << " = " << ptr1 << "\n";
 
+       float pi = 3.14;
+       float *ptr2 = &pi;
+
+       cout << sizeof(ptr1) << "\n";
+       cout << sizeof(ptr2) << "\n";
+
 // Deference Operator: Gets the value of the variable pointed by any pointer.
 //      * operator lets us directly access & modify the value of variable.
         int *ptr = &a;
         cout << ptr << "\n";
         cout << *ptr << "\n";
 
+        int **pptr = &ptr;
+        cout << &ptr << " = " << pptr << "\n";
+
         *ptr = 20;
         cout << a << "\n";
+
+// Null Pointer: We assign NULL value to a pointer to show that it doesn't point to any location.
+
+        int *ptr = NULL;
+        cout << ptr << "\n";
+        cout << *ptr << "\n";   // segmentation fault. "code stops running."
+        
+    // Deferencing null ptr is not possible as it'll result in error.
     return 0;
 }
