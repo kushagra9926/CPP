@@ -45,5 +45,14 @@ int main(){
         cout << *ptr << "\n";   // segmentation fault. "code stops running."
         
     // Deferencing null ptr is not possible as it'll result in error.
+
+// Passing Arguments: 
+        /*
+        Pass by value:
+                When parameter is a copy of actual argument variable in memory.
+
+        Pass by reference (pass by address):
+                When we pass the reference of argument to the function.
+        */
     return 0;
 }
