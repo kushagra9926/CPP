@@ -1,6 +1,11 @@
 #include <iostream>
 using namespace std;
 
+
+void changeA(int param){
+        param = 20;
+        cout << param << "\n";
+}
 int main(){
 
 // Hexadecimal: These number become address of memory location. Hexadecimal numbers have base 16 [0 to 9, a(10), b(11), c(12), d(13), e(14), f(15)].
@@ -17,14 +22,14 @@ int main(){
         char *ptr = &c;
         int **ptr2 = &ptr;
         */
-       int *ptr1 = &a;
-       cout << &a << " = " << ptr1 << "\n";
+        int *ptr1 = &a;
+        cout << &a << " = " << ptr1 << "\n";
 
-       float pi = 3.14;
-       float *ptr2 = &pi;
+        float pi = 3.14;
+        float *ptr2 = &pi;
 
-       cout << sizeof(ptr1) << "\n";
-       cout << sizeof(ptr2) << "\n";
+        cout << sizeof(ptr1) << "\n";
+        cout << sizeof(ptr2) << "\n";
 
 // Deference Operator: Gets the value of the variable pointed by any pointer.
 //      * operator lets us directly access & modify the value of variable.
@@ -40,9 +45,9 @@ int main(){
 
 // Null Pointer: We assign NULL value to a pointer to show that it doesn't point to any location.
 
-        int *ptr = NULL;
-        cout << ptr << "\n";
-        cout << *ptr << "\n";   // segmentation fault. "code stops running."
+        int *ptr3 = NULL;
+        cout << ptr3 << "\n";
+        // cout << *ptr3 << "\n";   // segmentation fault. "code stops running."
         
     // Deferencing null ptr is not possible as it'll result in error.
 
@@ -50,9 +55,14 @@ int main(){
         /*
         Pass by value:
                 When parameter is a copy of actual argument variable in memory.
-
+        */
+        int p = 10;
+        changeA(p);
+        cout << p << "\n";
+        /*
         Pass by reference (pass by address):
                 When we pass the reference of argument to the function.
         */
+
     return 0;
 }
