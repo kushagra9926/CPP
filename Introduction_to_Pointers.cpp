@@ -6,6 +6,12 @@ void changeA(int param){
         param = 20;
         cout << param << "\n";
 }
+
+void changea(int *ptr){
+        *ptr = 20;
+        cout << *ptr << "\n";
+}
+
 int main(){
 
 // Hexadecimal: These number become address of memory location. Hexadecimal numbers have base 16 [0 to 9, a(10), b(11), c(12), d(13), e(14), f(15)].
@@ -63,6 +69,10 @@ int main(){
         Pass by reference (pass by address):
                 When we pass the reference of argument to the function.
         */
+        int q = 10;
+        changea(&q);
+
+        cout << q << "\n";
 
     return 0;
 }
