@@ -14,9 +14,9 @@ using namespace std;
         }
 
 // Pass by reference using Reference variables:
-        void changeM(int &m){
-                m = 20;
-                cout << m << "\n";
+        void changeM(int &param){
+                param = 20;
+                cout << param << "\n";
         }
 
 
