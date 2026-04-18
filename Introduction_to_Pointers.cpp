@@ -1,16 +1,24 @@
 #include <iostream>
 using namespace std;
 
+// Pass by value:
+        void changeA(int p){
+                p = 20;
+                cout << p << "\n";
+        }
 
-void changeA(int param){
-        param = 20;
-        cout << param << "\n";
-}
+// Pass by reference using Pointer:
+        void changea(int *ptr){
+                *ptr = 20;
+                cout << *ptr << "\n";
+        }
 
-void changea(int *ptr){
-        *ptr = 20;
-        cout << *ptr << "\n";
-}
+// Pass by reference using Reference variables:
+        void changeM(int &m){
+                m = 20;
+                cout << m << "\n";
+        }
+
 
 int main(){
 
@@ -69,10 +77,29 @@ int main(){
         Pass by reference (pass by address):
                 When we pass the reference of argument to the function.
         */
+       
+        // Pass by reference using Pointer:
         int q = 10;
         changea(&q);
 
         cout << q << "\n";
+
+// Reference variable: Reference variable is an alternate name(alias) of already existing variable.
+        /*
+        int a = 5;
+        int &b = a;
+        b = 25; 
+
+        cout << b << "\n";      // output: 25
+        cout << a << "\n";      // output: 25
+
+        a & b refers to the same location in memory
+        */
+
+        // Pass by reference using Reference variable:
+        int m = 10;
+        changeM(m);
+        cout << m << "\n";
 
     return 0;
 }
