@@ -117,6 +117,16 @@ int main(){
                 cout << &x << "\n";
                 // Ans: pttr2 = pttr1 == &x.
 
+// Practice Question: What is the type of a * b:  float* a, b;
+        // Ans: 
+                /*
+                a --> float ptr
+                b --> normal float variable
+                */
 
+// Practice Question: Can we initialize a pointer with value 0?
+        // Ans: Yes, it is possible to give zero value to a pointer and this is the same thing as creating a null pointer. 
+        int *u = 0;
+        cout << u << "\n";
     return 0;
 }
