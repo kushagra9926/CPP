@@ -10,16 +10,19 @@ void multipleBy2(int &a, int &b, int&c){
 
 int main(){
 // Question 1: What will be the output of the following code:
-    int x;
+    int x1;
     int *ptr;
-    x = 7;
-    ptr = &x;
-    cout << *ptr;
+    x1 = 7;
+    ptr = &x1;
+    cout << *ptr << "\n";
+    // Ans: Ouput --> 7
 
 // Question 2: What will be the output of the following code: 
     int x = 1, y = 2, z = 3;
     multipleBy2(x, y, z);
     cout << x << y << z << "\n";
+    // Ans: Output --> 246
+
 // Question 3: What will be the output of the following code: 
     int a = 32;
     int *ptr1 = &a;
@@ -30,6 +33,6 @@ int main(){
     cho += a;
     *ptr1 += ch;
     cout << a << ", " << ch << endl;
-    
+
     return 0;
 }
