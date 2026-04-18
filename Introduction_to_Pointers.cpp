@@ -101,5 +101,12 @@ int main(){
         changeM(m);
         cout << m << "\n";
 
+// Practice Question: What will ptr2 point to in the following code:
+        /*
+        int x = 5, y = 10;
+        int *ptr1 = &x, *ptr2 = &y;
+        ptr2 = ptr1;
+        */
+
     return 0;
 }
