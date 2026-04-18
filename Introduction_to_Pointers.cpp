@@ -107,6 +107,16 @@ int main(){
         int *ptr1 = &x, *ptr2 = &y;
         ptr2 = ptr1;
         */
+        // Solution: 
+                int x = 5, y = 10;
+                int *pttr1 = &x, *pttr2 = &y;
+                pttr2 = pttr1;
+
+                cout << pttr2 << "\n";
+                cout << pttr1 << "\n";
+                cout << &x << "\n";
+                // Ans: pttr2 = pttr1 == &x.
+
 
     return 0;
 }
