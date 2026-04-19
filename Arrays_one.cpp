@@ -13,9 +13,15 @@ int main(){
     length of array ---> sizeof(marks) / sizeof(int). 
     Memory is statically allocated (at compile time).
     */
+    int n1;
+    cout << "Enter length of array: " << "\n";
+    cin >> n1;
 
-    int arr1[5] = {7, 5, 2, 1, 3};
-    int n1 = sizeof(arr1) / sizeof(int);
+    int arr1[n1];
+    
+    for(int i = 0; i < n1; i++){
+        cin >> arr1[i];
+    }
 
     for(int i = 0; i < n1; i++){
         cout << arr1[i] << " ";  // i = 0, 1, 2, 3, 4     // Output --> 7 5 2 1 3
