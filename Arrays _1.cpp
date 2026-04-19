@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+int main(){
 // Arrays: Linear collection of same type of elements that are stored together in contiguous memory spaces.
 
 // Creating an Array: 
@@ -11,9 +12,6 @@ using namespace std;
 
     length of array ---> sizeof(marks) / sizeof(int). 
     Memory is statically allocated (at compile time).
-    
     */
-int main(){
-
     return 0;
 }
