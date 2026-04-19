@@ -18,7 +18,7 @@ int main(){
     int len1 = sizeof(arr1) / sizeof(int);
 
     for(int idx = 0; idx <= len1 - 1; idx++){
-        cout << arr1[idx] << "\n";  // idx = 0, 1, 2, 3, 4
+        cout << arr1[idx] << " ";  // idx = 0, 1, 2, 3, 4     // Output --> 7 5 2 1 3
     }
     return 0;
 }
