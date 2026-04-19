@@ -29,10 +29,10 @@ int main(){
 
     char ch = 'A';
     char &cho = ch;
-
+    
     cho += a;
     *ptr1 += ch;
     cout << a << ", " << ch << endl;
-
+    // Ans: Output --> 129, a
     return 0;
 }
