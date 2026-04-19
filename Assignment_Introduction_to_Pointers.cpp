@@ -30,9 +30,9 @@ int main(){
     char ch = 'A';
     char &cho = ch;
     
-    cho += a;
-    *ptr1 += ch;
-    cout << a << ", " << ch << endl;
+    cho += a;     // Here cho = cho + a ---> 65 + 32 = 97 (a) and cho is in char so, cho = a and hence ch = a.
+    *ptr1 += ch;  // Here *ptr1 = *ptr1 + ch ---> 32 + 97 = 129 so here *ptr1 = 129 and hence a = 129.
+    cout << a << ", " << ch << endl; 
     // Ans: Output --> 129, a
     return 0;
 }
