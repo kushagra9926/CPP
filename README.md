@@ -1,1 +1,1 @@
-# BE CHILL 😎 BUT DON'T TAKE PILL💊
+# Be chill 😎, but don’t take pills 💊.
