@@ -42,25 +42,25 @@ int main(){
         float pi = 3.14;
         float *ptr2 = &pi;
 
-        cout << sizeof(ptr1) << "\n";
-        cout << sizeof(ptr2) << "\n";
+        cout << sizeof(ptr1) << "\n";    // Output --> 4
+        cout << sizeof(ptr2) << "\n";    // Output --> 4
 
 // Deference Operator: Gets the value of the variable pointed by any pointer.
 //      * operator lets us directly access & modify the value of variable.
         int *ptr = &a;
-        cout << ptr << "\n";
-        cout << *ptr << "\n";
+        cout << ptr << "\n";    // Output --> 0x61feec
+        cout << *ptr << "\n";   // Output --> 10
 
         int **pptr = &ptr;
         cout << &ptr << " = " << pptr << "\n";
 
         *ptr = 20;
-        cout << a << "\n";
+        cout << a << "\n";   // Output --> 20
 
 // Null Pointer: We assign NULL value to a pointer to show that it doesn't point to any location.
 
         int *ptr3 = NULL;
-        cout << ptr3 << "\n";
+        cout << ptr3 << "\n";   // Output --> 0
         // cout << *ptr3 << "\n";   // segmentation fault. "code stops running."
         
     // Deferencing null ptr is not possible as it'll result in error.
@@ -71,8 +71,8 @@ int main(){
                 When parameter is a copy of actual argument variable in memory.
         */
         int p = 10;
-        changeA(p);
-        cout << p << "\n";
+        changeA(p);    // Output --> 20
+        cout << p << "\n";   // Output --> 10
         /*
         Pass by reference (pass by address):
                 When we pass the reference of argument to the function.
@@ -80,9 +80,9 @@ int main(){
        
         // Pass by reference using Pointer:
         int q = 10;
-        changea(&q);
+        changea(&q);  // Output --> 20
 
-        cout << q << "\n";
+        cout << q << "\n"; // Output --> 20
 
 // Reference variable: Reference variable is an alternate name(alias) of already existing variable.
         /*
@@ -98,8 +98,8 @@ int main(){
 
         // Pass by reference using Reference variable:
         int m = 10;
-        changeM(m);
-        cout << m << "\n";
+        changeM(m);   // Output --> 20 
+        cout << m << "\n";  // Output --> 20
 
 // Practice Question: What will ptr2 point to in the following code:
         /*
