@@ -15,10 +15,10 @@ int main(){
     */
 
     int arr1[5] = {7, 5, 2, 1, 3};
-    int len1 = sizeof(arr1) / sizeof(int);
+    int n1 = sizeof(arr1) / sizeof(int);
 
-    for(int idx = 0; idx <= len1 - 1; idx++){
-        cout << arr1[idx] << " ";  // idx = 0, 1, 2, 3, 4     // Output --> 7 5 2 1 3
+    for(int i = 0; i < n1; i++){
+        cout << arr1[i] << " ";  // i = 0, 1, 2, 3, 4     // Output --> 7 5 2 1 3
     }
     return 0;
 }
