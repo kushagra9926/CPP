@@ -9,6 +9,7 @@ using namespace std;
     int marks[50] = {1, 2, 3};
     int marks[] = {1, 2, 3};
 
+    length of array ---> sizeof(marks) / sizeof(int). 
     Memory is statically allocated (at compile time).
     
     */
