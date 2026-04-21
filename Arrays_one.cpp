@@ -35,11 +35,11 @@ int main(){
     int max = arr2[0];
     int min = arr2[0];
     for(int i = 0; i < n2; i++){
-        if(arr2[i] >= max){
+        if(arr2[i] > max){
             max = arr2[i];
             cout << "assigning val " << arr2[i] << " to max \n";
         }
-        if(arr2[i] <= min){
+        if(arr2[i] < min){
             min = arr2[i];
             cout << "assigning val " << arr2[i] << " to min \n";
         }
