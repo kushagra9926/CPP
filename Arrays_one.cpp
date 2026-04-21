@@ -26,5 +26,18 @@ int main(){
     for(int i = 0; i < n1; i++){
         cout << arr1[i] << " ";  // i = 0, 1, 2, 3, 4     // Output --> 7 5 2 1 3
     }
+    cout << "\n";
+
+// Find Largest in Array:
+    int arr2[] = {5, 4, 3, 9, 12};
+    int n2 = sizeof(arr2) / sizeof(int);
+
+    int max = arr2[0];
+    for(int i = 0; i < n2; i++){
+        if(arr2[i] >= max){
+            max = arr2[i];
+        }
+    }
+    cout << "Largest value in Array is " << max << "\n";
     return 0;
 }
