@@ -36,6 +36,7 @@ int main(){
     for(int i = 0; i < n2; i++){
         if(arr2[i] >= max){
             max = arr2[i];
+            cout << "assigning val " << arr2[i] << " to max \n";
         }
     }
     cout << "Largest value in Array is " << max << "\n";
