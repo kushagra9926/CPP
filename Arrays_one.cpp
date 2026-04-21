@@ -47,5 +47,12 @@ int main(){
     cout << "Largest value in Array is " << max << "\n";
     cout << "Smallest value in Array is " << min << "\n";
 
+// Arrays are passed by reference: 
+    // In C++ array name ---> pointer.
+        /*                              ____                
+        void printArr(int arr[]) {...}      |
+                                            |---> same 
+        void printArr(int *arr) {...}   ____|
+        */
     return 0;
 }
