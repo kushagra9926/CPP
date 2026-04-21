@@ -54,5 +54,13 @@ int main(){
                                             |---> same 
         void printArr(int *arr) {...}   ____|
         */
+
+    int arr3[] = {1, 2, 3, 4, 5};
+    int n3 = sizeof(arr3) / sizeof(int);
+
+    cout << arr3 << endl;  // Output: 0x61feb0
+    cout << *arr3 << endl; // Output: 1
+    cout << *(arr3 + 1) << endl; // Output: 2
+    cout << *(arr3 + 2) << endl; // Output: 3
     return 0;
 }
