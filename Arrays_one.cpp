@@ -10,9 +10,9 @@ void func2(int *ptr){
     ptr[0] = 1000;
 }
 
-void printArr(int nums[]){
-    // cout << sizeof(nums) << endl;   // 4 = size of int pointer not the array size which is equal to 20.
-    int n = sizeof(nums) / sizeof(int); 
+void printArr(int nums[], int n){
+    // cout << sizeof(nums) << endl;   // 4 = size of int pointer not the array size which is equal to 20. So thats why we take one more parameter in our function which tells the size of the array.
+    // int n = sizeof(nums) / sizeof(int);  // This will give 4 / 4 = 1 which is not the size of array.
 
     for(int i = 0; i < n; i++){
         cout << nums[i] << ",";
@@ -87,6 +87,8 @@ int main(){
     func2(arr3);   
     cout << arr3[0] << "\n";  
 
-    printArr(arr3);
+    int arr4[] = {1, 2, 3, 4, 5};
+    int n4 = sizeof(arr4) / sizeof(int);
+    printArr(arr4 , n4);
     return 0;
 }
