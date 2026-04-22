@@ -131,5 +131,7 @@ int main(){
     }
 
     printArr6(arr6, n6);
+
+    // without extra space (2 Pointer Approach)
     return 0;
 }
