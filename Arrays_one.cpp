@@ -10,11 +10,12 @@ void func2(int *ptr){
     ptr[0] = 1000;
 }
 
-void printArr(int arr[]){
-    int n = sizeof(arr) / sizeof(int);
+void printArr(int nums[]){
+    // cout << sizeof(nums) << endl;   // 4 = size of int pointer not the array size which is equal to 20.
+    int n = sizeof(nums) / sizeof(int); 
 
     for(int i = 0; i < n; i++){
-        cout << arr[i] << ",";
+        cout << nums[i] << ",";
     }
     cout << endl;
 }
@@ -86,6 +87,6 @@ int main(){
     func2(arr3);   
     cout << arr3[0] << "\n";  
 
-    
+    printArr(arr3);
     return 0;
 }
