@@ -73,8 +73,8 @@ int main(){
             cout << "assigning val " << arr2[i] << " to min \n";
         }
     }
-    cout << "Largest value in Array is " << max << "\n";
-    cout << "Smallest value in Array is " << min << "\n";
+    cout << "Largest value in Array is " << max << "\n";  // Output ---> 12
+    cout << "Smallest value in Array is " << min << "\n"; // Output ---> 3
 
 // Arrays are passed by reference: 
     // In C++ array name ---> pointer.
