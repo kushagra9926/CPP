@@ -93,13 +93,13 @@ int main(){
     cout << *(arr3 + 2) << endl; // Output: 3 
 
     func1(arr3);   // Passing array name is eq. to passing the pointer
-    cout << arr3[0] << "\n"; 
+    cout << arr3[0] << "\n";   // Output ---> 1000
     func2(arr3);   
-    cout << arr3[0] << "\n";  
+    cout << arr3[0] << "\n";   // Output ---> 1000
 
     int arr4[] = {1, 2, 3, 4, 5};
     int n4 = sizeof(arr4) / sizeof(int);
-    printArr(arr4 , n4);
+    printArr(arr4 , n4);    // Output ---> 1,2,3,4,5,
 
 // Linear Search
     int arr5[] = {2, 4, 6, 8, 10, 12, 14, 16};
