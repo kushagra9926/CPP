@@ -10,6 +10,15 @@ void func2(int *ptr){
     ptr[0] = 1000;
 }
 
+void printArr(int arr[]){
+    int n = sizeof(arr) / sizeof(int);
+
+    for(int i = 0; i < n; i++){
+        cout << arr[i] << ",";
+    }
+    cout << endl;
+}
+
 int main(){
 // Arrays: Linear collection of same type of elements that are stored together in contiguous memory spaces.
 
@@ -73,8 +82,10 @@ int main(){
     cout << *(arr3 + 2) << endl; // Output: 3 
 
     func1(arr3);   // Passing array name is eq. to passing the pointer
-    func2(arr3);   // 
+    cout << arr3[0] << "\n"; 
+    func2(arr3);   
     cout << arr3[0] << "\n";  
 
+    
     return 0;
 }
