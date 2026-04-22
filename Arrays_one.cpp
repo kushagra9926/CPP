@@ -107,5 +107,10 @@ int main(){
 
     cout << linearSearch(arr5, n5, 10) << endl;   // Output ---> 4
     cout << linearSearch(arr5, n5, 20) << endl;   // Output ---> -1 
+
+// Reverse an array 
+    // with extra space
+
+    
     return 0;
 }
