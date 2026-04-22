@@ -1,6 +1,15 @@
 #include <iostream>
 using namespace std;
 
+
+void func1(int arr[]){
+    arr[0] = 1000;
+}
+
+void func2(int *ptr){
+    ptr[0] = 1000;
+}
+
 int main(){
 // Arrays: Linear collection of same type of elements that are stored together in contiguous memory spaces.
 
@@ -61,6 +70,11 @@ int main(){
     cout << arr3 << endl;  // Output: 0x61feb0
     cout << *arr3 << endl; // Output: 1
     cout << *(arr3 + 1) << endl; // Output: 2
-    cout << *(arr3 + 2) << endl; // Output: 3
+    cout << *(arr3 + 2) << endl; // Output: 3 
+
+    func1(arr3);   // Passing array name is eq. to passing the pointer
+    func2(arr3);   // 
+    cout << arr3[0] << "\n";  
+
     return 0;
 }
