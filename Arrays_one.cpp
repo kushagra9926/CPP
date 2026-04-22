@@ -137,6 +137,8 @@ int main(){
         arr7[start] = arr7[end];
         arr7[end] = temp;
 
+        // swap(arr7[start], arr7[end]);     // In built function of C++ to swap numbers.
+
         start++;
         end--;
     }
