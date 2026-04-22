@@ -30,6 +30,13 @@ int linearSearch(int *arr, int n, int key){
     return -1;
 }
 
+void printArr6(int *arr, int n){
+    for(int i = 0; i < n; i++){
+        cout << arr[i] << ",";
+    }
+    cout << endl;
+}
+
 int main(){
 // Arrays: Linear collection of same type of elements that are stored together in contiguous memory spaces.
 
@@ -110,7 +117,19 @@ int main(){
 
 // Reverse an array 
     // with extra space
-
     
+    int arr6[] = {5, 4, 3, 9, 2};
+    int n6 = sizeof(arr6) / sizeof(int);
+
+    int copyArr6[n6];
+    for(int i = 0; i < n6; i++){
+        int j = n6 - i - 1;
+        copyArr6[i] = arr6[j];
+    }
+    for(int i = 0; i < n6; i++){
+        arr6[i] = copyArr6[i];
+    }
+
+    printArr6(arr6, n6);
     return 0;
 }
