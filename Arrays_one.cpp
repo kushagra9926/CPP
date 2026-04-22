@@ -20,6 +20,16 @@ void printArr(int nums[], int n){
     cout << endl;
 }
 
+int linearSearch(int *arr, int n, int key){
+    for(int i = 0; i < n; i++){
+        if(arr[i] == key){
+            return i;
+        }
+    }
+
+    return -1;
+}
+
 int main(){
 // Arrays: Linear collection of same type of elements that are stored together in contiguous memory spaces.
 
@@ -90,5 +100,12 @@ int main(){
     int arr4[] = {1, 2, 3, 4, 5};
     int n4 = sizeof(arr4) / sizeof(int);
     printArr(arr4 , n4);
+
+// Linear Search
+    int arr5[] = {2, 4, 6, 8, 10, 12, 14, 16};
+    int n5 = sizeof(arr5) / sizeof(int);
+
+    cout << linearSearch(arr5, n5, 10) << endl;   // Output ---> 4
+    cout << linearSearch(arr5, n5, 20) << endl;   // Output ---> -1 
     return 0;
 }
