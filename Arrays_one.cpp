@@ -230,10 +230,16 @@ int main(){
         cout << a2ptr << "\n"; // 0x61fdd8
         a2ptr = a2ptr - 3;
         cout << a2ptr << "\n"; // 0x61fdcc
-        
+
         // In context of array:
         int arr9[] = {1, 2, 3, 4, 5};
         int n9 = sizeof(arr9) / sizeof(int);
         printArray(arr9, n9);
+
+    // 3. Addition & Substraction of Pointers
+        /*
+        ptr1 + ptr2     // Invalid operation
+        ptr1 - ptr2     // both should be of same type
+        */
     return 0;
 }
