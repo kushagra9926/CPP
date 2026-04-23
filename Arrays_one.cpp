@@ -209,5 +209,8 @@ int main(){
        cout << aptr << "\n";  // 0x61fdd4
        aptr++;  // 1 int++ 
        cout << aptr << "\n";  // 0x61fdd8
+       aptr--;
+       cout << aptr << "\n";
+
     return 0;
 }
