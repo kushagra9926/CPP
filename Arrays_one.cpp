@@ -30,6 +30,20 @@ int linearSearch(int *arr, int n, int key){
     return -1;
 }
 
+int binarySearch(int *arr, int n, int key){
+    int start = 0;
+    int end = n - 1;
+    int mid = (start + end) / 2;
+    while(start <= end){
+        if(arr[mid] == key){
+            return mid;
+        }else if(arr[mid] < key){
+            start = mid + 1;
+        }else{
+            end = mid - 1;
+        }
+    }
+}
 int main(){
 // Arrays: Linear collection of same type of elements that are stored together in contiguous memory spaces.
 
@@ -147,9 +161,9 @@ int main(){
     // prerequisite: sorted array
     int arr8[] = {2, 4, 6, 8, 10, 12, 14, 16};
     int n8 = sizeof(arr8) / sizeof(int);
-    int start2 = 0;
-    int end2 = n8 - 1;
     
-
+    cout << binarySearch(arr8, n8, 12) << endl;    // Output ---> 5
+    cout << binarySearch(arr8, n8, 10) << endl;    // Output ---> 4
+    cout << binarySearch(arr8, n8, 15) << endl;    // Output ---> -1
     return 0;
 }
