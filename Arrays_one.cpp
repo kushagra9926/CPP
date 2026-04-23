@@ -36,15 +36,14 @@ int binarySearch(int *arr, int n, int key){
     while(start <= end){
         int mid = (start + end) / 2;
         if(arr[mid] == key){
-            return mid;
-        }else if(arr[mid] < key){
+            return mid;    // key found
+        }else if(arr[mid] < key){   // 2nd half
             start = mid + 1;
-        }else if(arr[mid] > key){
+        }else {          // 1st half
             end = mid - 1;
-        }else{
-            return -1;
         }
     }
+    return -1;
 }
 int main(){
 // Arrays: Linear collection of same type of elements that are stored together in contiguous memory spaces.
@@ -180,6 +179,6 @@ int main(){
     
     cout << binarySearch(arr8, n8, 12) << endl;    // Output ---> 5
     cout << binarySearch(arr8, n8, 10) << endl;    // Output ---> 4
-    cout << binarySearch(arr8, n8, 16) << endl;    // Output ---> -1
+    cout << binarySearch(arr8, n8, 15) << endl;    // Output ---> -1
     return 0;
 }
