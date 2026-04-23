@@ -45,6 +45,12 @@ int binarySearch(int *arr, int n, int key){
     }
     return -1;
 }
+
+void printArray(int *ptr, int n){
+    for(int i = 0; i < n; i++){
+        cout << *(ptr + i) << "\n";
+    }
+}
 int main(){
 // Arrays: Linear collection of same type of elements that are stored together in contiguous memory spaces.
 
@@ -217,13 +223,17 @@ int main(){
         ptr + 3    // [3 * int] = [3 * 4] = 12
         ptr - 3
         */
-    int a2 = 10;
-    int *a2ptr = &a2;
-    cout << a2ptr << "\n"; // 0x61fdcc
-    a2ptr = a2ptr + 3;
-    cout << a2ptr << "\n"; // 0x61fdd8
-    a2ptr = a2ptr - 3;
-    cout << a2ptr << "\n"; // 0x61fdcc
-
+        int a2 = 10;
+        int *a2ptr = &a2;
+        cout << a2ptr << "\n"; // 0x61fdcc
+        a2ptr = a2ptr + 3;
+        cout << a2ptr << "\n"; // 0x61fdd8
+        a2ptr = a2ptr - 3;
+        cout << a2ptr << "\n"; // 0x61fdcc
+        
+        // In context of array:
+        int arr9[] = {1, 2, 3, 4, 5};
+        int n9 = sizeof(arr9) / sizeof(int);
+        printArray(arr9, n9);
     return 0;
 }
