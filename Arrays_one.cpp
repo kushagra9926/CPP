@@ -130,19 +130,26 @@ int main(){
     int arr7[] = {5, 4, 3, 9, 2};
     int n7 = sizeof(arr7) / sizeof(int);
 
-    int start = 0, end = n7 - 1;
+    int start1 = 0, end1 = n7 - 1;
 
-    while(start  < end){
-        int temp = arr7[start];
-        arr7[start] = arr7[end];
-        arr7[end] = temp;
+    while(start1  < end1){
+        int temp = arr7[start1];
+        arr7[start1] = arr7[end1];
+        arr7[end1] = temp;
 
         // swap(arr7[start], arr7[end]);     // In built function of C++ to swap numbers.
-
-        start++;
-        end--;
+        start1++;
+        end1--;
     }
     printArr(arr7, n7);
+
+// Binary Search 
+    // prerequisite: sorted array
+    int arr8[] = {2, 4, 6, 8, 10, 12, 14, 16};
+    int n8 = sizeof(arr8) / sizeof(int);
+    int start2 = 0;
+    int end2 = n8 - 1;
+    
 
     return 0;
 }
