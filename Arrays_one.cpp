@@ -160,6 +160,8 @@ int main(){
 
 // Binary Search 
     // prerequisite: sorted array
+
+    // Time complexity: O(log n)
     /*
     Pseudocode
         int st = 0, end = n - 1;
