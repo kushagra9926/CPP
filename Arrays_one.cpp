@@ -210,7 +210,7 @@ int main(){
        aptr++;  // 1 int++ 
        cout << aptr << "\n";  // 0x61fdd8
        aptr--;
-       cout << aptr << "\n";
+       cout << aptr << "\n";  // 0x61fdd4
 
     return 0;
 }
