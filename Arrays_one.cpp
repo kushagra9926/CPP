@@ -33,14 +33,16 @@ int linearSearch(int *arr, int n, int key){
 int binarySearch(int *arr, int n, int key){
     int start = 0;
     int end = n - 1;
-    int mid = (start + end) / 2;
     while(start <= end){
+        int mid = (start + end) / 2;
         if(arr[mid] == key){
             return mid;
         }else if(arr[mid] < key){
             start = mid + 1;
-        }else{
+        }else if(arr[mid] > key){
             end = mid - 1;
+        }else{
+            return -1;
         }
     }
 }
@@ -159,11 +161,25 @@ int main(){
 
 // Binary Search 
     // prerequisite: sorted array
+    /*
+    Pseudocode
+        int st = 0, end = n - 1;
+        while(st <= end){
+            mid = (st + end) / 2;
+            if(arr[mid] == key){
+                return mid;
+            }else if(arr[mid] < key){     // 2nd half
+                st = mid + 1;
+            }else{                        // 1st half
+                end = mid - 1;
+            }
+        }
+    */
     int arr8[] = {2, 4, 6, 8, 10, 12, 14, 16};
     int n8 = sizeof(arr8) / sizeof(int);
     
     cout << binarySearch(arr8, n8, 12) << endl;    // Output ---> 5
     cout << binarySearch(arr8, n8, 10) << endl;    // Output ---> 4
-    cout << binarySearch(arr8, n8, 15) << endl;    // Output ---> -1
+    cout << binarySearch(arr8, n8, 16) << endl;    // Output ---> -1
     return 0;
 }
