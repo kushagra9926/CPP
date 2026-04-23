@@ -217,7 +217,7 @@ int main(){
         ptr + 3    // [3 * int] = [3 * 4] = 12
         ptr - 3
         */
-    int a2 = 5;
+    int a2 = 10;
     int *a2ptr = &a2;
     cout << a2ptr << "\n"; // 0x61fdcc
     a2ptr = a2ptr + 3;
