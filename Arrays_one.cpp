@@ -192,5 +192,10 @@ int main(){
     int y = 20;
     ptr = &y;
     cout << *ptr << "\n";
+    // But similar to this is not possible in array because it has a constant pointer.
+    int arr[5];
+    cout << arr << "n";
+    int y1 = 25;
+    // arr = &y;   // Not possible.
     return 0;
 }
