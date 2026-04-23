@@ -117,6 +117,7 @@ int main(){
     printArr(arr4 , n4);    // Output ---> 1,2,3,4,5,
 
 // Linear Search
+    // Time Complextiy: O(n)  
     int arr5[] = {2, 4, 6, 8, 10, 12, 14, 16};
     int n5 = sizeof(arr5) / sizeof(int);
 
