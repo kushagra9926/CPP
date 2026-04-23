@@ -183,5 +183,14 @@ int main(){
     cout << binarySearch(arr8, n8, 12) << endl;    // Output ---> 5
     cout << binarySearch(arr8, n8, 10) << endl;    // Output ---> 4
     cout << binarySearch(arr8, n8, 15) << endl;    // Output ---> -1
+
+// Array Pointer: 
+    // Array Pointer acts like a constant pointer.
+    int x = 10;
+    int *ptr = &x;
+    
+    int y = 20;
+    ptr = &y;
+    cout << *ptr << "\n";
     return 0;
 }
