@@ -194,8 +194,20 @@ int main(){
     cout << *ptr << "\n";
     // But similar to this is not possible in array because it has a constant pointer.
     int arr[5];
-    cout << arr << "n";
+    cout << arr << "\n";
     int y1 = 25;
     // arr = &y;   // Not possible.
+
+// Pointer Arithmetic 
+    // 1. Increment & Decrement Operators
+        /*
+        ptr++ or ++ptr
+        ptr-- or --ptr
+        */
+       int a = 10;
+       int *aptr = &a;
+       cout << aptr << "\n";  // 0x61fdd4
+       aptr++;
+       cout << aptr << "\n";  // 0x61fdd8
     return 0;
 }
