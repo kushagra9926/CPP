@@ -201,8 +201,8 @@ int main(){
 // Pointer Arithmetic 
     // 1. Increment & Decrement Operators
         /*
-        ptr++ or ++ptr
-        ptr-- or --ptr
+        ptr++ or ++ptr    // ++ increment in pointer means to add one integer to a pointer.
+        ptr-- or --ptr    // -- increment in pointer means to substract one integer to a pointer. 
         */
        int a = 10;
        int *aptr = &a;
