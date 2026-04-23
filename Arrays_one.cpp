@@ -201,13 +201,13 @@ int main(){
 // Pointer Arithmetic 
     // 1. Increment & Decrement Operators
         /*
-        ptr++ or ++ptr    // ++ increment in pointer means to add one integer to a pointer.
-        ptr-- or --ptr    // -- increment in pointer means to substract one integer to a pointer. 
+        ptr++ or ++ptr    // ++ increment in pointer means to add one Data type to a pointer.
+        ptr-- or --ptr    // -- increment in pointer means to substract one Data type to a pointer. 
         */
        int a = 10;
        int *aptr = &a;
        cout << aptr << "\n";  // 0x61fdd4
-       aptr++;
+       aptr++;  // 1 int++ 
        cout << aptr << "\n";  // 0x61fdd8
     return 0;
 }
