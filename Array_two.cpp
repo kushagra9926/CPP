@@ -14,7 +14,7 @@ int main(){
         4, 45
         5   
 
-    
+    // For a n size array number of subarrays are: (n * (n + 1)) / 2 .
     subsequence (non-continuous): 
         1 3 5 // this is subsquence but not subarray. Also in subsequence if one comes before in array it should come before in subsequence also.
 
