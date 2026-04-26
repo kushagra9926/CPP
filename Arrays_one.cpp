@@ -241,5 +241,13 @@ int main(){
         ptr1 + ptr2     // Invalid operation
         ptr1 - ptr2     // both should be of same type
         */
+       int a = 5;
+       int *ptr1 = &a;
+       int *ptr2 = ptr1 + 3;
+
+       cout << ptr2 << "\n";  // 0x61fdb4
+       cout << ptr1 << "\n";  // 0x61fda8
+
+       cout << ptr2 - ptr1 << "\n";  // 3
     return 0;
 }
