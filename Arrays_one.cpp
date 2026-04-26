@@ -249,5 +249,14 @@ int main(){
        cout << ptr1 << "\n";  // 0x61fda8
 
        cout << ptr2 - ptr1 << "\n";  // 3
+
+       int arra[20] = {1, 2, 3, 4, 5, 6};
+       int *ptr3 = arra;
+       int *ptr4 = ptr3 + 3;
+
+       cout << *ptr4 << "\n";  // 4
+       cout << *ptr3 << "\n";  // 1
+
+       cout << ptr4 - ptr3 << "\n";  // 3
     return 0;
 }
