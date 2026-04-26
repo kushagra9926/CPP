@@ -258,5 +258,11 @@ int main(){
        cout << *ptr3 << "\n";  // 1
 
        cout << ptr4 - ptr3 << "\n";  // 3
-    return 0;
+
+    // 4. Comparison (==, <, <=, >, >=)
+
+        cout << (ptr2 > ptr1) << "\n";  // yes : true : 1
+        cout << (ptr2 < ptr1) << "\n";  // no : false : 0
+        cout << (ptr3 == arra) << "\n";  // yes : true : 1
+     return 0;
 }
