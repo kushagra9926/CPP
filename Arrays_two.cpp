@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
 
-void printSubarrays(int arr, int n){
+void printSubarrays(int *arr, int n){
     for(int start = 1; start < n; start++){
         for(int end = start; end < n ; end++){
-            cout << "(" << start << "," << end << ")" << " ";
+            // cout << "(" << start << "," << end << ")" << " ";    // (1,1) (1,2) (1,3) (1,4) (2,2) (2,3) (2,4) (3,3) (3,4) (4,4)
+            for(int i = 1; )
         }
     }
 }
@@ -35,6 +36,7 @@ int main(){
     int arr1[5] = {1, 2, 3, 4, 5};
     int n1 = sizeof(arr1) / sizeof(int);
     
+    printSubarrays(arr1, n1);
     
     /*
     subsequence (non-continuous): 
