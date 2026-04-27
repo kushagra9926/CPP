@@ -66,7 +66,7 @@ int main(){
     */
 
 // Max Subarray Sum
-    // Brute Force Approach
+// Brute Force Approach
     int arr2[] = {2, -3, 6, -5, 4, 2};
     int n2 = sizeof(arr2) / sizeof(int);
     maxSubarraySum1(arr2, n2);
