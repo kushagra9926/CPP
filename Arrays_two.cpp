@@ -13,6 +13,19 @@ void printSubarrays(int *arr, int n){      // Time Complexity: O(n^3)
         cout << "\n";
     }
 }
+
+void maxSubarraySum(int *arr, int n){
+    for(int start = 0; start < n; start++){
+        for(int end = start; end < n ; end++){
+            int curSum = 0;
+            for(int i = start; i <= end; i++){
+                curSum += arr[i];
+            }
+            cout << curSum << ",";
+        }
+        cout << "\n";
+    }
+}
 int main(){
 
 // Print Subarrays: Subarray is continuous part of an array.
@@ -46,5 +59,11 @@ int main(){
     subsequence (non-continuous): 
         1 3 5 // this is subsquence but not subarray. Also in subsequence if one comes before in array it should come before in subsequence also.
     */
+
+// Max Subarray Sum
+    int arr2[] = {2, -3, 6, -5, 4, 2};
+    int n2 = sizeof(arr2) / sizeof(int);
+    maxSubarraySum(arr2, n2);
+
     return 0;
 }
