@@ -2,6 +2,7 @@
 #include <climits>
 using namespace std;
 
+// Print Subarrays
 void printSubarrays(int *arr, int n){      // Time Complexity: O(n^3)
     for(int start = 0; start < n; start++){
         for(int end = start; end < n ; end++){
@@ -31,6 +32,7 @@ void maxSubarraySum1(int *arr, int n){
 
     cout << "maximum subarray sum = " << maxSum << endl;
 }
+
 int main(){
 
 // Print Subarrays: Subarray is continuous part of an array.
@@ -55,21 +57,23 @@ int main(){
       4            4
     */
     
-    int arr1[5] = {1, 2, 3, 4, 5};
-    int n1 = sizeof(arr1) / sizeof(int);
-    
-    printSubarrays(arr1, n1);
-    
     /*
     subsequence (non-continuous): 
         1 3 5 // this is subsquence but not subarray. Also in subsequence if one comes before in array it should come before in subsequence also.
     */
+    
+// Print Subarrays
+    int arr1[5] = {1, 2, 3, 4, 5};
+    int n1 = sizeof(arr1) / sizeof(int);
+    
+    printSubarrays(arr1, n1);
 
 // Max Subarray Sum
-// Brute Force Approach
-    int arr2[] = {2, -3, 6, -5, 4, 2};
-    int n2 = sizeof(arr2) / sizeof(int);
-    maxSubarraySum1(arr2, n2);
+
+    // Brute Force Approach
+        int arr2[] = {2, -3, 6, -5, 4, 2};
+        int n2 = sizeof(arr2) / sizeof(int);
+        maxSubarraySum1(arr2, n2);
 
     return 0;
 }
