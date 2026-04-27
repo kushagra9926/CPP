@@ -1,4 +1,5 @@
 #include <iostream>
+#include <climits>
 using namespace std;
 
 void printSubarrays(int *arr, int n){      // Time Complexity: O(n^3)
@@ -14,7 +15,8 @@ void printSubarrays(int *arr, int n){      // Time Complexity: O(n^3)
     }
 }
 
-void maxSubarraySum(int *arr, int n){
+void maxSubarraySum1(int *arr, int n){
+    int maxSum = INT_MIN;
     for(int start = 0; start < n; start++){
         for(int end = start; end < n ; end++){
             int curSum = 0;
@@ -22,9 +24,12 @@ void maxSubarraySum(int *arr, int n){
                 curSum += arr[i];
             }
             cout << curSum << ",";
+            maxSum = max(maxSum, curSum);
         }
         cout << "\n";
     }
+
+    cout << "maximum subarray sum = " << maxSum << endl;
 }
 int main(){
 
@@ -63,7 +68,7 @@ int main(){
 // Max Subarray Sum
     int arr2[] = {2, -3, 6, -5, 4, 2};
     int n2 = sizeof(arr2) / sizeof(int);
-    maxSubarraySum(arr2, n2);
+    maxSubarraySum1(arr2, n2);
 
     return 0;
 }
