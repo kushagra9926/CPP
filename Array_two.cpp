@@ -15,10 +15,19 @@ int main(){
         5   
 
     // For a n size array number of subarrays are: (n * (n + 1)) / 2 .
+    
+    Let's see by index
+    start           end
+      0        0, 1, 2, 3, 4
+      1         1, 2, 3, 4
+      2          2, 3, 4
+      3           3, 4
+      4            4
+    */
+    
+    /*
     subsequence (non-continuous): 
         1 3 5 // this is subsquence but not subarray. Also in subsequence if one comes before in array it should come before in subsequence also.
-
-
     */
     return 0;
 }
