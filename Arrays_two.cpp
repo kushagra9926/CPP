@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void printSubarrays(int *arr, int n){
+void printSubarrays(int *arr, int n){      // Time Complexity: O(n^3)
     for(int start = 0; start < n; start++){
         for(int end = start; end < n ; end++){
             // cout << "(" << start << "," << end << ")" << " ";    // (0,0) (0,1) (0,2) (0,3) (0,4) (1,1) (1,2) (1,3) (1,4) (2,2) (2,3) (2,4) (3,3) (3,4) (4,4)
