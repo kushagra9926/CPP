@@ -1,6 +1,13 @@
 #include <iostream>
 using namespace std;
 
+void printSubarrays(int arr, int n){
+    for(int start = 1; start < n; start++){
+        for(int end = start; end < n ; end++){
+            cout << "(" << start << "," << end << ")" << " ";
+        }
+    }
+}
 int main(){
 
 // Print Subarrays: Subarray is continuous part of an array.
@@ -24,6 +31,10 @@ int main(){
       3           3, 4
       4            4
     */
+    
+    int arr1[5] = {1, 2, 3, 4, 5};
+    int n1 = sizeof(arr1) / sizeof(int);
+    
     
     /*
     subsequence (non-continuous): 
