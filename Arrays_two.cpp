@@ -15,7 +15,7 @@ void printSubarrays(int *arr, int n){      // Time Complexity: O(n^3)
         cout << "\n";
     }
 }
-// Brute Force Approach
+// Brute Force Approach - 1
 void maxSubarraySum1(int *arr, int n){
     int maxSum = INT_MIN;
     for(int start = 0; start < n; start++){
@@ -26,6 +26,22 @@ void maxSubarraySum1(int *arr, int n){
             }
             cout << curSum << ",";
             maxSum = max(maxSum, curSum);
+        }
+        cout << "\n";
+    }
+
+    cout << "maximum subarray sum = " << maxSum << endl;
+}
+
+// Brute Force Approach - 2
+void maxSubarraySum2(int *arr, int n){
+    int maxSum = INT_MIN;
+    for(int start = 0; start < n; start++){
+            int currSum = 0;
+        for(int end = start; end < n ; end++){
+            currSum += arr[end];
+            cout << currSum << ",";
+            maxSum = max(maxSum, currSum);
         }
         cout << "\n";
     }
@@ -70,10 +86,14 @@ int main(){
 
 // Max Subarray Sum
 
-    // Brute Force Approach
+    // Brute Force Approach - 1
         int arr2[] = {2, -3, 6, -5, 4, 2};
         int n2 = sizeof(arr2) / sizeof(int);
         maxSubarraySum1(arr2, n2);
 
+    // Brute Force Approach - 2
+        int arr3[] = {2, -3, 6, -5, 4, 2};
+        int n3 = sizeof(arr3) / sizeof(int);
+        maxSubarraySum1(arr3, n3);
     return 0;
 }
