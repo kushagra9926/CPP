@@ -36,9 +36,9 @@ void maxSubarraySum1(int *arr, int n){
 // Brute Force Approach - 2
 void maxSubarraySum2(int *arr, int n){
     int maxSum = INT_MIN;
-    for(int start = 0; start < n; start++){
+    for(int start = 0; start < n; start++){     // start = 2
             int currSum = 0;
-        for(int end = start; end < n ; end++){
+        for(int end = start; end < n ; end++){  // end = 2, 3, 4, 5
             currSum += arr[end];
             cout << currSum << ",";
             maxSum = max(maxSum, currSum);
