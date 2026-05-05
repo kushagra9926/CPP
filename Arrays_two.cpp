@@ -63,6 +63,22 @@ void maxSubarraySum3(int *arr, int n){
     cout << "maximum subarray sum = " << maxSum << endl;
 }
 
+// Buy & Sell Stocks      
+void maxProfit(int *prices, int n){
+    int bestBuy[100000];
+    bestBuy[0] = INT_MAX;
+    for(int i = 1; i < n; i++){
+        bestBuy[i] = min(bestBuy[i-1], prices[i-1]);
+        // cout << bestBuy[i] << ",";
+    }
+    int maxProfit = 0;
+    for(int i = 0; i < n; i++){
+        int currProfit = prices[i] - bestBuy[i];
+        maxProfit = max(maxProfit, currProfit);
+    }
+    cout << "max Profit = " << maxProfit << endl;
+}   
+
 int main(){
 
 // Print Subarrays: Subarray is continuous part of an array.
@@ -115,7 +131,7 @@ int main(){
         int n4 = sizeof(arr4) / sizeof(int);
         maxSubarraySum3(arr4, n4);
 
-// Buy & Sell Stocks            
+// Buy & Sell Stocks         
     /* 
     prices = {7, 1, 5, 3, 6, 4};
     if we are selling on 
@@ -127,5 +143,9 @@ int main(){
 
     Ans is 5
     */
+    int prices[6] = {7, 1, 5, 3, 6, 4};
+    int n5 = sizeof(prices) / sizeof(int);
+
+    maxProfit(prices, n5);
     return 0;
 }
