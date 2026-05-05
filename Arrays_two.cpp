@@ -49,6 +49,20 @@ void maxSubarraySum2(int *arr, int n){
     cout << "maximum subarray sum = " << maxSum << endl;
 }
 
+// Kadane's Algorithm (DP)
+void maxSubarraySum3(int *arr, int n){
+    int maxSum = INT_MIN;
+    int currSum = 0;
+    for(int i = 0; i < n; i++){
+        currSum += arr[i];
+        maxSum = max(currSum, maxSum);
+        if(currSum < 0){
+            currSum = 0;
+        }
+    }
+    cout << "maximum subarray sum = " << maxSum << endl;
+}
+
 int main(){
 
 // Print Subarrays: Subarray is continuous part of an array.
@@ -86,14 +100,19 @@ int main(){
 
 // Max Subarray Sum
 
-    // Brute Force Approach - 1
+    // Brute Force Approach - 1   -->  Time complexity O(n^3)
         int arr2[] = {2, -3, 6, -5, 4, 2};
         int n2 = sizeof(arr2) / sizeof(int);
         maxSubarraySum1(arr2, n2);
 
-    // Brute Force Approach - 2
+    // Brute Force Approach - 2   -->  Time complexity O(n^2)   
         int arr3[] = {2, -3, 6, -5, 4, 2};
         int n3 = sizeof(arr3) / sizeof(int);
         maxSubarraySum1(arr3, n3);
+
+    // Kadane's Algorithm (DP)   --> Time complexity O(n) 
+        int arr4[] = {2, -3, 6, -5, 4, 2};
+        int n4 = sizeof(arr4) / sizeof(int);
+        maxSubarraySum3(arr4, n4);
     return 0;
 }
