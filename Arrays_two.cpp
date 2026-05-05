@@ -147,5 +147,7 @@ int main(){
     int n5 = sizeof(prices) / sizeof(int);
 
     maxProfit(prices, n5);
+
+// Trapping Rainwater  
     return 0;
 }
