@@ -131,7 +131,7 @@ int main(){
         int n4 = sizeof(arr4) / sizeof(int);
         maxSubarraySum3(arr4, n4);
 
-// Buy & Sell Stocks         
+// Buy & Sell Stocks   --->  Time complexity O(n)
     /* 
     prices = {7, 1, 5, 3, 6, 4};
     if we are selling on 
