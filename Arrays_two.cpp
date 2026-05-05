@@ -114,5 +114,18 @@ int main(){
         int arr4[] = {2, -3, 6, -5, 4, 2};
         int n4 = sizeof(arr4) / sizeof(int);
         maxSubarraySum3(arr4, n4);
+
+// Buy & Sell Stocks            
+    /* 
+    prices = {7, 1, 5, 3, 6, 4};
+    if we are selling on 
+    sell = {7, 1, 5, 3, 6, 4};
+    so best buy is
+    best buy = {+∞, 7, 1, 1, 1, 1};
+
+    profit = {-∞, -6, 4, 2, 5, 3};
+
+    Ans is 5
+    */
     return 0;
 }
