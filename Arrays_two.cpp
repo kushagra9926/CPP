@@ -92,9 +92,9 @@ void trap(int *heights, int n){
     }
     for(int i = n - 2; i >= 0; i--){
         rightMax[i] = max(rightMax[i + 1], heights[i + 1]);
-        cout << rightMax[i] << ",";
+        // cout << rightMax[i] << ",";
     }
-    cout << rightMax[n - 1] << ",";
+    // cout << rightMax[n - 1] << ",";
 
 }
 
