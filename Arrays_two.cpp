@@ -166,7 +166,11 @@ int main(){
     
     * bar needs a valley to trap water i.e. larger the bars on both sides.
     * min of (left largest & right largest) bars gives trapped water.
+    
+    left max = [-∞, 4, 4, 4, 6, 6, 6]
+    right max = [6, 6, 6, 5, 5, 5, -∞]
     */
+   int heights[7] = {4, 2, 0, 6, 3, 2, 5};
 
     return 0;
 }
