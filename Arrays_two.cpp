@@ -187,7 +187,7 @@ int main(){
 
     maxProfit(prices, n5);
 
-// Trapping Rainwater  
+// Trapping Rainwater  --->  Time complextiy O(n)
     /*
     height = [4, 2, 0, 6, 3, 2, 5]
     Find amount of water trapped.
