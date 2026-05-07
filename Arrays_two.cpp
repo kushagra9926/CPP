@@ -79,6 +79,25 @@ void maxProfit(int *prices, int n){
     cout << "max Profit = " << maxProfit << endl;
 }   
 
+// Trapping Rainwater  
+
+void trap(int *heights, int n){
+    int leftMax[20000], rightMax[20000];
+    leftMax[0] = INT_MIN;
+    rightMax[n - 1] = INT_MIN;
+    // cout << leftMax[0] << " "; 
+    for(int i = 1; i < n; i++){
+        leftMax[i] = max(leftMax[i - 1], heights[i - 1]);
+        // cout << leftMax[i] << " "; 
+    }
+    for(int i = n - 2; i >= 0; i--){
+        rightMax[i] = max(rightMax[i + 1], heights[i + 1]);
+        cout << rightMax[i] << ",";
+    }
+    cout << rightMax[n - 1] << ",";
+
+}
+
 int main(){
 
 // Print Subarrays: Subarray is continuous part of an array.
@@ -171,6 +190,7 @@ int main(){
     right max = [6, 6, 6, 5, 5, 5, -∞]
     */
    int heights[7] = {4, 2, 0, 6, 3, 2, 5};
-
+   int n6 = sizeof(heights) / sizeof(int);
+   trap(heights, n6); 
     return 0;
 }
