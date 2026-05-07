@@ -149,5 +149,24 @@ int main(){
     maxProfit(prices, n5);
 
 // Trapping Rainwater  
+    /*
+    height = [4, 2, 0, 6, 3, 2, 5]
+    Find amount of water trapped.
+
+                ███
+                ███
+                ███
+    ███         ███         ███
+    ███         ███         ███
+    ███         ███ ███     ███
+    ███ ███     ███ ███ ███ ███
+    ███ ███     ███ ███ ███ ███
+────────────────────────────────────────────
+     4   2   0   6   3   2   5
+    
+    * bar needs a valley to trap water i.e. larger the bars on both sides.
+    * min of (left largest & right largest) bars gives trapped water.
+    */
+
     return 0;
 }
