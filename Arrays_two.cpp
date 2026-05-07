@@ -83,8 +83,20 @@ void maxProfit(int *prices, int n){
 
 void trap(int *heights, int n){
     int leftMax[20000], rightMax[20000];
-    leftMax[0] = INT_MIN;
-    rightMax[n - 1] = INT_MIN;
+    /*
+    in Math ==> -∞ - 4 ==> -ve value
+    in C++ ==> INT_MIN - 4 ==> +ve value (due to bit calculation)
+
+    so 
+    leftMax[0] = heights[0];
+    rightMax[0] = heights[n - 1]; 
+    */
+    // leftMax[0] = INT_MIN;
+    // rightMax[n - 1] = INT_MIN;
+
+    leftMax[0] = heights[0];
+    rightMax[0] = heights[n - 1];
+    
     // cout << leftMax[0] << " "; 
     for(int i = 1; i < n; i++){
         leftMax[i] = max(leftMax[i - 1], heights[i - 1]);
@@ -95,7 +107,10 @@ void trap(int *heights, int n){
         // cout << rightMax[i] << ",";
     }
     // cout << rightMax[n - 1] << ",";
+    int waterTrapped = 0;
+    for(int i = 0; i < n; i++){
 
+    }
 }
 
 int main(){
