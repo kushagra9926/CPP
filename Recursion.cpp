@@ -87,6 +87,9 @@ T(n) = O(2ⁿ) exponectial
                    /              \
                 take/skip       take/skip
                    2                2
+
+    Time Complexity: O(n × 2ⁿ)
+    Space Complexity: O(n)
  */
 
 
@@ -111,6 +114,68 @@ T(n) = O(2ⁿ) exponectial
 
  }
 
+ // Printing Subsequences whose sum is K
+void PrintS(int ind, vector <int> &ds, int s, int sum, int arr[], int n){
+    if(ind == n){
+        if(s == sum){
+            for(auto it: ds){
+                cout << it << " ";
+            }
+            cout << endl;
+        }
+        return;
+    }
+
+    ds.push_back(arr[ind]);
+    s += arr[ind];
+    PrintS(ind+1, ds, s, sum, arr, n);
+    ds.pop_back();
+    s -= arr[ind];
+    PrintS(ind+1, ds, s, sum, arr, n);
+}
+// If to print only one answer.
+bool PrintS1(int ind, vector <int> &ds, int s, int sum, int arr[], int n){
+    if(ind == n){
+        if(s == sum){
+            for(auto it: ds){
+                cout << it << " ";
+            }
+            cout << endl;
+            return true;
+        }
+        else return false;
+    }
+
+    ds.push_back(arr[ind]);
+    s += arr[ind];
+    if(PrintS1(ind+1, ds, s, sum, arr, n) == true) {
+        return true;
+    }
+    ds.pop_back();
+    s -= arr[ind];
+    if(PrintS1(ind+1, ds, s, sum, arr, n) == true){
+        return true;
+    }
+    return false;
+}
+
+// If to print the count whose sum is 2
+int PrintS2(int ind, int s, int sum, int arr[], int n){
+    if(ind == n){
+        //condition satisfied 
+        if(s == sum){
+            return 1;
+        }
+        //condition not satisfied
+        else return 0;
+    }
+
+    s += arr[ind];
+    int l = PrintS2(ind+1, s, sum, arr, n) ;
+    s -= arr[ind];
+    int r = PrintS2(ind+1, s, sum, arr, n);
+    return l + r;
+}
 int main(){
     int n;
     cin >> n;
@@ -126,10 +191,14 @@ int main(){
     for(int i = 0; i < n; i++) cout << arr[i] << " ";
     cout << endl;
 
-    
-    int arr1[] = {3, 1, 2};
+
+    int arr1[] = {1, 2, 1};
     int n1 = 3;
+    int sum = 2;
     vector<int> ds;
-    PrintF(0, ds, arr1, n1); 
+    PrintF(0, ds, arr1, n1);
+    PrintS(0, ds, 0, sum, arr1, n1);
+    PrintS1(0, ds, 0, sum, arr1, n1);
+    cout << PrintS2(0, 0, sum, arr1, n1) << endl;; 
     return 0;
 }
