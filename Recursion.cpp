@@ -42,6 +42,75 @@ bool p(int i, string &s) {
     p(i + 1, s);
 }
 
+// Multiple Recursion Calls
+
+// 1) Fibbonachi
+
+int fib(int n){
+    if (n <= 1) return n;
+    return fib(n - 1) + fib(n - 2);
+} 
+/*
+                         fib(5)
+                       /        \
+                  fib(4)        fib(3)
+                 /    \         /    \
+            fib(3)   fib(2)  fib(2)  fib(1)
+            /   \     /  \    /  \
+        fib(2) fib(1) fib(1) fib(0) fib(1) fib(0)
+        /   \
+    fib(1) fib(0)
+
+T(n) = O(2ⁿ) exponectial
+*/
+
+// Print Subsequence (It is a sequence obtained by deleting some elements from a string/array without changing the order of the remaining elements.)
+/*
+                                      []
+                                   /     \
+                                 /         \      
+                               /             \
+                            [3]                 []
+                         /      \              /    \
+                     [3,1]      [3]          [1]       []
+                     /   \      /   \       /   \     /   \
+                [3,1,2] [3,1]  [3,2] [3]  [1,2] [1]  [2]  []
+
+
+                         []
+                       /    \
+                    take    skip
+                     3        3
+                    /          \
+                 take/skip   take/skip
+                    1            1
+                   /              \
+                take/skip       take/skip
+                   2                2
+ */
+
+
+ void PrintF(int ind, vector<int> &ds, int arr[], int n){
+    if (ind == n){
+        for(auto it : ds){
+            cout << it << " ";
+        }
+    if (ds.size() == 0){
+        cout << "{}";
+    }
+        cout << endl;
+        return;
+    }
+    // take or pick the particular index into the subsequence
+    ds.push_back(arr[ind]);
+    PrintF(ind+1, ds, arr, n);
+    ds.pop_back();
+
+    // not pick, or not take condition, this element is not added to your subsequence
+    PrintF(ind+1, ds, arr, n);
+
+ }
+
 int main(){
     int n;
     cin >> n;
@@ -49,10 +118,18 @@ int main(){
     string s = "madam";
     for(int i = 0; i < n; i++) cin >> arr[i];
     sum1(n);
+    cout << fib(5) << endl;
     cout << sum2(n) << endl;
     cout << factorial(n) << endl;
     cout << p(0, s) << endl;
     f(0, arr, n);
     for(int i = 0; i < n; i++) cout << arr[i] << " ";
+    cout << endl;
+
+    
+    int arr1[] = {3, 1, 2};
+    int n1 = 3;
+    vector<int> ds;
+    PrintF(0, ds, arr1, n1); 
     return 0;
 }
