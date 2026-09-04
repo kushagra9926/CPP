@@ -130,7 +130,8 @@ Pass 4: Take 2 → insert between 1 and 3
 So the final sorted array is:
 [1, 2, 3, 4, 5]
 
-
+Time Complexity: O(n^2) ----> Worst & Average Complectiy 
+                 O(n)   ----> Best Case
 */
 #include <bits/stdc++.h>
 using namespace std;
