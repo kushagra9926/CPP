@@ -105,6 +105,30 @@ Compare 4 and 5:
 Final:
 2  3  4  5  8
 
+Time Complexity: O(n^2) ----> Worst & Average Complexity
+                 O(n)   ----> Best Complexity
+
+// Insetion Sort: 
+It is a simple sorting algorithm that builds the sorted array one element at a time.
+Example
+
+Array:
+[5, 3, 4, 1, 2]
+
+Pass 1: Take 3 → insert before 5
+[3, 5, 4, 1, 2]
+
+Pass 2: Take 4 → insert between 3 and 5
+[3, 4, 5, 1, 2]
+
+Pass 3: Take 1 → insert at beginning
+[1, 3, 4, 5, 2]
+
+Pass 4: Take 2 → insert between 1 and 3
+[1, 2, 3, 4, 5]
+
+So the final sorted array is:
+[1, 2, 3, 4, 5]
 
 
 */
@@ -136,6 +160,18 @@ void bubble_sort(int n, int arr[]){
     }
 }
 
+// Insertion Sort
+void insertion_sort(int n, int arr[]){
+    for(int i = 0; i < n; i++){
+        int j = i;
+        while(j > 0 && arr[j-1] > arr[j]){
+            int temp = arr[j-1];
+            arr[j-1] = arr[j];
+            arr[j] = temp;
+            j--;
+        }
+    }
+}
 int main(){
     int n;
     cin >> n;
@@ -145,6 +181,13 @@ int main(){
     for(int i = 0; i< n; i++){
         cout << arr[i] << " ";
     } cout << endl;
-
+    bubble_sort(n, arr);
+    for(int i = 0; i< n; i++){
+        cout << arr[i] << " ";
+    } cout << endl;
+    insertion_sort(n, arr);
+    for(int i = 0; i< n; i++){
+        cout << arr[i] << " ";
+    } cout << endl;
     return 0;
 }
